@@ -44,8 +44,7 @@ function loadFeedback() {
     items.reverse().forEach(item => {
         const div = document.createElement('div');
         div.className = 'feedback-item';
-        div.innerHTML = `<strong>Anonymous</strong><br>${item.text.replace(/\n/g, '<br>')}
-                         <br><small>${item.date}</small>`;
+        div.innerHTML = `<strong>Anonymous</strong><br>${item.text.replace(/\n/g, '<br>')}<br><small>${item.date}</small>`;
         feedbackList.appendChild(div);
     });
 }
@@ -64,5 +63,4 @@ document.getElementById('submit-feedback').addEventListener('click', () => {
     loadFeedback();
 });
 
-// Load feedback on page start
 loadFeedback();
