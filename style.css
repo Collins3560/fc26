@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
 
 * { margin:0; padding:0; box-sizing:border-box; }
-
 body { font-family:'Roboto',sans-serif; color:#e0e0e0; min-height:100vh; perspective:1200px; overflow-x:hidden; background:#000; }
 
 .background-3d { position:fixed; inset:0; background:url('https://files.catbox.moe/ii7wb0.jpg') center/cover no-repeat;
@@ -15,13 +14,11 @@ header { background:linear-gradient(90deg,rgba(0,200,83,.95),rgba(100,221,23,.95
 h1 { font-family:'Orbitron',sans-serif; font-size:4.2rem; color:white; text-shadow:0 0 30px rgba(0,0,0,.9); margin:0; }
 .subtitle { font-size:1.4rem; color:#ccff90; margin-top:.5rem; }
 
-main { max-width:900px; margin:3rem auto; padding:0 1rem; position:relative; z-index:2; }
-
-.card { background:rgba(20,20,35,.82); border-radius:20px; padding:2.2rem; margin-bottom:2rem; backdrop-filter:blur(15px);
+main { max-width:940px; margin:3rem auto; padding:0 1rem; position:relative; z-index:2; }
+.card { background:rgba(20,20,35,.88); border-radius:20px; padding:2.4rem; margin-bottom:2rem; backdrop-filter:blur(15px);
     border:1px solid rgba(100,221,23,.5); }
 
-.update-desc { font-size:1.15rem; line-height:1.8; color:#ccff90; margin-bottom:1rem; }
-.how-to-update, .contact { background:rgba(0,200,83,.2); padding:1rem; border-radius:12px; margin-top:1.5rem; line-height:1.7; }
+.update-desc,.contact { background:rgba(0,200,83,.2); padding:1rem; border-radius:12px; margin-top:1rem; line-height:1.7; }
 
 .notice { display:none; background:#00C853; color:white; padding:1.2rem; border-radius:12px; margin:1.5rem 0;
     text-align:center; font-weight:bold; animation:fadeIn .6s; }
@@ -33,15 +30,24 @@ main { max-width:900px; margin:3rem auto; padding:0 1rem; position:relative; z-i
 .dl-btn:hover { background:#00a047; transform:translateY(-5px); }
 .size { font-size:.9rem; opacity:.9; margin-left:12px; }
 
+/* INSTRUCTIONS */
+.instructions h2 { color:#00C853; margin:2rem 0 1rem; }
+.instructions ol.steps { counter-reset:item; padding-left:0; margin:1.5rem 0; }
+.instructions ol.steps > li { display:block; margin:2rem 0; padding-left:3.5rem; position:relative; line-height:1.7; }
+.instructions ol.steps > li:before { content:counter(item)""; counter-increment:item; position:absolute; left:0; top:0;
+    background:#00C853; color:white; width:44px; height:44px; border-radius:50%; text-align:center; line-height:44px;
+    font-weight:bold; font-size:1.4rem; }
+.instructions img { max-width:100%; border-radius:12px; margin:12px 0; cursor:zoom-in; transition:0.3s; }
+.instructions img:hover { opacity:0.9; }
+
+/* FEEDBACK */
 #feedback-box { width:100%; height:100px; background:rgba(0,0,0,.4); border:1px solid #00C853; border-radius:12px;
-    padding:1rem; color:white; font-size:1rem; margin:1rem 0; resize:vertical; }
+    padding:1rem; color:white; margin:1rem 0; resize:vertical; }
 #submit-feedback { background:#00C853; color:white; border:none; padding:.9rem 2rem; border-radius:50px;
     font-weight:bold; cursor:pointer; }
-
 .feedback-item { background:rgba(255,255,255,.07); padding:1rem; border-radius:10px; margin:10px 0;
     border-left:4px solid #00C853; }
 .feedback-item small { color:#aaa; }
 
 footer { text-align:center; padding:3rem; color:#777; font-size:.95rem; }
-
 @media (max-width:600px) { h1{font-size:2.9rem;} }
