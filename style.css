@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body { font-family:'Roboto',sans-serif; color:#e0e0e0; min-height:100vh; perspective:1200px; overflow-x:hidden; background:#000; }
+
+.background-3d { position:fixed; inset:0; background:url('https://files.catbox.moe/ii7wb0.jpg') center/cover no-repeat;
+    transform-style:preserve-3d; transition:transform .5s ease-out; z-index:-2; filter:brightness(0.65) contrast(1.15); }
+.overlay { position:fixed; inset:0; background:radial-gradient(circle at center,rgba(0,0,0,.2),rgba(0,0,0,.85)); z-index:-1; }
+
+.rules-banner { background:#c62828; color:white; padding:1rem; text-align:center; font-weight:bold; z-index:10; }
+.rules-banner ol { margin:0.5rem 0; font-size:0.95rem; }
+
+header { background:linear-gradient(90deg,rgba(0,200,83,.95),rgba(100,221,23,.95)); padding:2.5rem 1rem; text-align:center; backdrop-filter:blur(8px); }
+h1 { font-family:'Orbitron',sans-serif; font-size:4.2rem; color:white; text-shadow:0 0 30px rgba(0,0,0,.9); margin:0; }
+.subtitle { font-size:1.4rem; color:#ccff90; margin-top:.5rem; }
+
+main { max-width:900px; margin:3rem auto; padding:0 1rem; position:relative; z-index:2; }
+
+.card { background:rgba(20,20,35,.82); border-radius:20px; padding:2.2rem; margin-bottom:2rem; backdrop-filter:blur(15px);
+    border:1px solid rgba(100,221,23,.5); }
+
+.update-desc { font-size:1.15rem; line-height:1.8; color:#ccff90; margin-bottom:1rem; }
+.how-to-update, .contact { background:rgba(0,200,83,.2); padding:1rem; border-radius:12px; margin-top:1.5rem; line-height:1.7; }
+
+.notice { display:none; background:#00C853; color:white; padding:1.2rem; border-radius:12px; margin:1.5rem 0;
+    text-align:center; font-weight:bold; animation:fadeIn .6s; }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+.download-grid { display:flex; flex-direction:column; gap:1.2rem; margin:2rem 0; }
+.dl-btn { background:#00C853; color:white; border:none; padding:1.1rem 2rem; border-radius:50px; font-size:1.25rem;
+    font-weight:bold; cursor:pointer; box-shadow:0 6px 25px rgba(0,200,83,.6); transition:all .3s; text-align:left; }
+.dl-btn:hover { background:#00a047; transform:translateY(-5px); }
+.size { font-size:.9rem; opacity:.9; margin-left:12px; }
+
+#feedback-box { width:100%; height:100px; background:rgba(0,0,0,.4); border:1px solid #00C853; border-radius:12px;
+    padding:1rem; color:white; font-size:1rem; margin:1rem 0; resize:vertical; }
+#submit-feedback { background:#00C853; color:white; border:none; padding:.9rem 2rem; border-radius:50px;
+    font-weight:bold; cursor:pointer; }
+
+.feedback-item { background:rgba(255,255,255,.07); padding:1rem; border-radius:10px; margin:10px 0;
+    border-left:4px solid #00C853; }
+.feedback-item small { color:#aaa; }
+
+footer { text-align:center; padding:3rem; color:#777; font-size:.95rem; }
+
+@media (max-width:600px) { h1{font-size:2.9rem;} }
